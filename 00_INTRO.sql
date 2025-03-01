@@ -19,8 +19,8 @@ SELECT
     a.idea AS idea_from_a,
     b.idea AS idea_from_b,
     CONCAT(a.idea, ' + ', b.idea) AS combined_idea
-FROM ideas_a AS a
-CROSS JOIN ideas_b AS b;
+FROM ideas_a AS a,
+ideas_b AS b;
 
 /* 04. FULL OUTER JOIN */
 SELECT 
