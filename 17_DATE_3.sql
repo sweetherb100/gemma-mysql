@@ -30,16 +30,16 @@ SELECT DATE_FORMAT('2024-12-31', '%Y-%m') AS Y_m_date;
 # [코드 17-10] DATE 연도-월-일 포맷 코드
 SELECT DATE_FORMAT('2024-12-31 14:30:00','%Y-%m-%d') AS Y_m_d_date;
 
-# [코드 17-10] DATE 연도-월-일 시:분 포맷 코드
+# [코드 17-11] DATE 연도-월-일 시:분 포맷 코드
 SELECT DATE_FORMAT('2024-12-31 14:30:17', '%Y-%m-%d %H:%i') AS Y_m_d_H_i_date;
 
-# [코드 17-11] DATE 문제 3 중간 코드
+# [코드 17-12] DATE 문제 3 중간 코드
 SELECT
     trans_date,
     DATE_FORMAT(trans_date, '%Y-%m') AS trans_month
 FROM transactions; 
 
-# [코드 17-12] DATE 문제 3 최종 코드
+# [코드 17-13] DATE 문제 3 최종 코드
 SELECT
     DATE_FORMAT(trans_date, '%Y-%m') AS month,
     country,
