@@ -45,8 +45,8 @@ GROUP BY department;
 
 # [코드 5-5] PARTITION BY 코드
 SELECT
-	name,
 	department,
 	name,
+	salary,
 	AVG(salary) OVER (PARTITION BY department) AS avg_salary
 FROM employee;
