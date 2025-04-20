@@ -77,7 +77,7 @@ ON o.product_id = p.product_id;
 SELECT *
 FROM products AS p
 INNER JOIN orders AS o
-ON p.product_id = p.product_id;
+ON p.product_id = o.product_id;
 
 # [코드 1-6] 서브 쿼리를 사용하여 조인 코드
 SELECT *
@@ -89,4 +89,4 @@ INNER JOIN (
    SELECT *
    FROM orders
 ) AS o
-ON p.product_id = p.product_id;
+ON p.product_id = o.product_id;
