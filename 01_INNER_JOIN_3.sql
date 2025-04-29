@@ -79,7 +79,7 @@ FROM (
 # [코드 1-11] for loop 코드
 for (num2 = 0; num2 <= 3; num2++) {
    for (num1 = 0; num1 <= 2; num1++) {
-   cout << num2 << " " << num1 << endl;
+      cout << num2 << " " << num1 << endl;
    }
 };
 

@@ -37,8 +37,8 @@ GROUP BY event_type;
 SELECT 
 	e.business_id,
 	e.occurrences,
-	e.event_type,
-	avge.event_type,
+	e.event_type AS e_event_type,
+	avge.event_type AS avge_event_type,
 	avge.avg_occ
 FROM events AS e
 INNER JOIN (
