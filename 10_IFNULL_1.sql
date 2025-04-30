@@ -1,7 +1,7 @@
 /*
 [질문]
-각 사용자(name)가 이동한 거리(travelled_distance)를 조회하는 SQL 쿼리를 작성합니다.
-travelled_distance 기준으로 내림차순으로 정렬하고, 두 명 이상의 사용자가 동일한 거리를 이동한 경우 이름을 기준으로 오름차순으로 정렬합니다.
+각 사용자(name)가 이동한 거리(traveled_distance)를 조회하는 SQL 쿼리를 작성합니다.
+traveled_distance 기준으로 내림차순으로 정렬하고, 두 명 이상의 사용자가 동일한 거리를 이동한 경우 이름을 기준으로 오름차순으로 정렬합니다.
 */
 
 # [SETTING]
@@ -73,17 +73,17 @@ GROUP BY u.id;
 # [코드 10-3] IFNULL 문제 1 최종 코드
 SELECT
     u.name,
-    IFNULL(SUM(r.distance), 0) AS travelled_distance
+    IFNULL(SUM(r.distance), 0) AS traveled_distance
 FROM users AS u
 LEFT OUTER JOIN rides AS r
 ON u.id = r.user_id
 GROUP BY u.id, u.name /* u.name만 쓰는 것은 비추천. 동명이인이 나올 수 있기 때문에 */
-ORDER BY travelled_distance DESC, name;
+ORDER BY traveled_distance DESC, name;
 
 # [코드 10-4] IFNULL 문제 1 오답 코드
 SELECT
     u.id,
-    SUM(r.distance) AS travelled_distance /* 결과: NULL -> 틀림 */
+    SUM(r.distance) AS traveled_distance /* 결과: NULL -> 틀림 */
 FROM users AS u
 LEFT OUTER JOIN rides AS r
 ON u.id = r.user_id
