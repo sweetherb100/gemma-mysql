@@ -50,8 +50,8 @@ SELECT
     order_date,
     DATE_FORMAT(order_date, '%Y') AS order_year1,
     YEAR(order_date) AS order_year2,
-    DATE_FORMAT(order_date, '%Y-%m') AS order_month,
-    MONTH(order_date) AS order_month
+    DATE_FORMAT(order_date, '%Y-%m') AS order_month1,
+    MONTH(order_date) AS order_month2
 FROM orders; 
 
 # [코드 10-9] IFNULL 문제 2 중간 코드
@@ -59,7 +59,7 @@ SELECT
     buyer_id,
     COUNT(*) AS orders_in_2025
 FROM orders
-WHERE DATE_FORMAT(order_date, '%Y') = '2025'
+WHERE DATE_FORMAT(order_date, '%Y') = 2025
 GROUP BY buyer_id; 
 
 # [코드 10-10] IFNULL 문제 2 중간 코드
@@ -74,7 +74,7 @@ LEFT OUTER JOIN (
 		buyer_id,
 		COUNT(*) AS orders_in_2025
 	FROM orders
-	WHERE DATE_FORMAT(order_date, '%Y') = '2025'
+	WHERE DATE_FORMAT(order_date, '%Y') = 2025
 	GROUP BY buyer_id
 ) AS o
 ON u.user_id = o.buyer_id;
@@ -90,7 +90,7 @@ LEFT OUTER JOIN (
 		buyer_id,
 		COUNT(*) AS orders_in_2025
 	FROM orders
-	WHERE DATE_FORMAT(order_date, '%Y') = '2025'
+	WHERE DATE_FORMAT(order_date, '%Y') = 2025
 	GROUP BY buyer_id
 ) AS o
 ON u.user_id = o.buyer_id; 
