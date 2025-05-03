@@ -49,14 +49,14 @@ FROM orders;
 # [코드 SET 3-10] 중간 코드
 SELECT book_id
 FROM orders
-WHERE DATE_FORMAT(delivery_date, '%Y') = DATE_FORMAT(DATE_SUB('2025-06-23', INTERVAL 1 YEAR), '%Y')
+WHERE delivery_date BETWEEN DATE_SUB('2025-06-23', INTERVAL 1 YEAR) AND '2025-06-23'
 GROUP BY book_id
 HAVING SUM(quantity) < 10;
 
 # [코드 SET 3-11] 중간 코드
 SELECT book_id
 FROM orders
-WHERE DATE_FORMAT(delivery_date, '%Y') = DATE_FORMAT(DATE_SUB('2025-06-23', INTERVAL 1 YEAR), '%Y')
+WHERE delivery_date BETWEEN DATE_SUB('2025-06-23', INTERVAL 1 YEAR) AND '2025-06-23'
 GROUP BY book_id
 HAVING SUM(quantity) >= 10
 
@@ -65,7 +65,8 @@ UNION
 SELECT book_id
 FROM books
 WHERE DATE_SUB('2025-06-23', INTERVAL 1 MONTH) < published_date
-  AND published_date <= '2025-06-23';
+  AND published_date <= '2025-06-23'
+ORDER BY book_id;
     
 # [코드 SET 3-12] 최종 코드
 SELECT
@@ -75,7 +76,7 @@ FROM books
 WHERE book_id NOT IN (
     SELECT book_id
     FROM orders
-    WHERE DATE_FORMAT(delivery_date, '%Y') = DATE_FORMAT(DATE_SUB('2025-06-23', INTERVAL 1 YEAR), '%Y')
+    WHERE delivery_date BETWEEN DATE_SUB('2025-06-23', INTERVAL 1 YEAR) AND '2025-06-23'
     GROUP BY book_id
     HAVING SUM(quantity) >= 10
     
