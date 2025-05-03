@@ -43,7 +43,7 @@ SELECT
 FROM traffic
 WHERE activity = 'login'
 GROUP BY user_id
-HAVING MIN(activity_date) > DATE_SUB('2025-06-30', INTERVAL 90 DAY);
+HAVING MIN(activity_date) >= DATE_SUB('2025-06-30', INTERVAL 90 DAY);
 
 # [코드 SET 1-10] 최종 코드
 SELECT
@@ -56,6 +56,6 @@ FROM (
     FROM traffic
     WHERE activity = 'login'
     GROUP BY user_id
-    HAVING MIN(activity_date) > DATE_SUB('2025-06-30', INTERVAL 90 DAY)
+    HAVING MIN(activity_date) >= DATE_SUB('2025-06-30', INTERVAL 90 DAY)
 ) AS t
 GROUP BY login_date;
