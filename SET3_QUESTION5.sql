@@ -64,7 +64,7 @@ UNION
 
 SELECT book_id
 FROM books
-WHERE DATE_SUB('2025-06-23', INTERVAL 1 MONTH) <= published_date
+WHERE DATE_SUB('2025-06-23', INTERVAL 1 MONTH) < published_date
   AND published_date <= '2025-06-23';
     
 # [코드 SET 3-12] 최종 코드
@@ -83,6 +83,6 @@ WHERE book_id NOT IN (
     
     SELECT book_id
     FROM books
-    WHERE DATE_SUB('2025-06-23', INTERVAL 1 MONTH) <= published_date
+    WHERE DATE_SUB('2025-06-23', INTERVAL 1 MONTH) < published_date
       AND published_date <= '2025-06-23'
 );
