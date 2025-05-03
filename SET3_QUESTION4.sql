@@ -57,7 +57,7 @@ WHERE rnk_date = 2
 # [코드 SET 3-8] 최종 코드
 SELECT
   ROUND(
-    COUNT(player_id) / (SELECT COUNT(DISTINCT player_id) AS total_count FROM activity), 2) AS login_again_rate
+    COUNT(player_id) / (SELECT COUNT(DISTINCT player_id) FROM activity), 2) AS login_again_rate
 FROM(
     SELECT
       player_id,
