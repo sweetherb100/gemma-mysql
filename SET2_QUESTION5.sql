@@ -14,8 +14,7 @@ CREATE TABLE web_log
 (
     user_id INT,
     timestamp  TIMESTAMP,
-    action  ENUM ('page_load', 'scroll_down', 'scroll_up', 'page_exit'),
-    PRIMARY KEY (user_id, timestamp)
+    action  ENUM ('page_load', 'scroll_down', 'scroll_up', 'page_exit')
 );
 INSERT INTO
 	web_log (user_id, timestamp, action)
