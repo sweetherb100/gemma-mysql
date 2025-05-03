@@ -11,8 +11,7 @@ DROP TABLE purchase_events;
 CREATE TABLE purchase_events (
   user_id INT,
   occurred_at TIMESTAMP,
-  device VARCHAR(255),
-  PRIMARY KEY (user_id, occurred_at)
+  device VARCHAR(255)
 );
 INSERT INTO
   purchase_events (user_id, occurred_at, device)
@@ -77,4 +76,4 @@ FROM (
 INNER JOIN purchase_users AS t2
 ON t1.user_id = t2.user_id
 GROUP BY language
-ORDER BY apple_user_count DESC;
+ORDER BY total_user_count DESC;
