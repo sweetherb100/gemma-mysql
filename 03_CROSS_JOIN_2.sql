@@ -71,6 +71,7 @@ ORDER BY student_id, subject_name;
 
 # [코드 3-6] CROSS JOIN 문제 2 최종 코드
 SELECT
+    a.student_id,
     a.student_name,
     b.subject_name,
     (
@@ -82,10 +83,11 @@ SELECT
     ) AS attended_exams
 FROM students AS a, /* CROSS JOIN */
 subjects AS b
-ORDER BY student_id, subject_name; 
+ORDER BY a.student_id, b.subject_name; 
 
 # [코드 3-7] CROSS JOIN 문제 2 최종 코드
 SELECT
+    a.student_id,
     a.student_name,
     a.subject_name,
     COUNT(e.subject_name) AS attended_exams
