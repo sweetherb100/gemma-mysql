@@ -1,6 +1,6 @@
 /*
 [질문]
-부서별 가장 급여가 높은 직원 이름(name), 부서(department), 해당 급여(salary)를 조회하는 SQL 쿼리를 작성합니다.
+부서별로 가장 급여가 높은 직원의 이름(name), 부서(department), 급여(salary)를 조회하는 SQL 쿼리를 작성합니다.
 */
 
 # [SETTING]

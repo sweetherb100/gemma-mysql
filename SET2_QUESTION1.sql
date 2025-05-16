@@ -1,6 +1,7 @@
 /*
 [질문]
 각 팔로워(follower)의 팔로워 수(follower_count)를 조회하는 SQL 쿼리를 작성합니다.
+팔로워 수 내림차순으로 정렬합니다.
 */
 
 # [SETTING]
