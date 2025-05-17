@@ -1,5 +1,5 @@
 /*
-거래(transaction) 없이 방문한 사용자의 ID(customer_id)와 이러한 유형의 방문 횟수(no_trans_count)를 조회하는 SQL 쿼리를 작성합니다.
+거래 없이 방문한 사용자의 ID(customer_id)와 이러한 유형의 방문 횟수(no_trans_count)를 조회하는 SQL 쿼리를 작성합니다.
 */
 
 # [SETTING]
