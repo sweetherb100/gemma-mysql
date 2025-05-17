@@ -1,6 +1,5 @@
 /*
-월(month)별, 국가(country)별로 거래 건수(trans_count), 거래량(trans_amount),
-승인된 거래 건수(approved_count), 승인된 거래량(approved_amount)을 조회하는 SQL 쿼리를 작성합니다.
+월(month)별, 국가(country)별로 거래 건수(trans_count), 거래량(trans_amount), 승인된 거래 건수(approved_count), 승인된 거래량(approved_amount)을 조회하는 SQL 쿼리를 작성합니다.
 */
 
 # [SETTING]

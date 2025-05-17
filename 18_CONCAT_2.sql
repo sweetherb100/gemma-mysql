@@ -1,6 +1,6 @@
 /*
 각 날짜(sell_date)에 대해 판매된 제품 수(sold_count)와 제품 이름(products)을 조회하는 SQL 쿼리를 작성합니다.
-각 날짜에 판매된 제품 이름(products)은 사전순으로 정렬되어야 하며, sell_date를 기준으로 정렬합니다.
+각 날짜에 판매된 제품 이름(products)은 알파벳 순서로 정렬하며, 최종적으로 sell_date를 기준으로 정렬합니다.
 */
 
 # [SETTING]
