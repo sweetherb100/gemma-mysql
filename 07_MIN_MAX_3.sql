@@ -1,6 +1,6 @@
 /*
 [질문]
-제품이 판매된 첫해에 대한 제품 ID(product_id), 연도(first_year), 수량(quantity) 및 가격(price)을 조회하는 SQL 쿼리를 작성합니다.
+제품이 판매된 첫해에 대한 제품 ID(product_id), 연도(first_year), 수량(quantity), 가격(price)을 조회하는 SQL 쿼리를 작성합니다.
 */
 
 # [SETTING]
