@@ -50,12 +50,12 @@ SELECT
     grade AS best_grade
 FROM
 (
-SELECT
-	student_id,
-	course_id,
-	grade,
-	RANK() OVER (PARTITION BY student_id ORDER BY grade DESC, course_id) AS rk
-FROM examinations
+	SELECT
+		student_id,
+		course_id,
+		grade,
+		RANK() OVER (PARTITION BY student_id ORDER BY grade DESC, course_id) AS rk
+	FROM examinations
 ) AS e
 WHERE rk = 1
 ORDER BY student_id;
