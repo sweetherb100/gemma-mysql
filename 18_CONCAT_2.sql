@@ -1,6 +1,6 @@
 /*
 각 날짜(sell_date)에 대해 판매된 제품 수(sold_count)와 제품 이름(products)을 조회하는 SQL 쿼리를 작성합니다.
-각 날짜에 판매된 제품 이름(products)은 알파벳 순서로 정렬하며, 최종적으로 sell_date를 기준으로 정렬합니다.
+각 날짜에 판매된 제품 이름은 알파벳 순서로 정렬하며, 최종적으로 sell_date를 기준으로 정렬합니다.
 */
 
 # [SETTING]
@@ -35,7 +35,7 @@ ORDER BY sell_date;
 SELECT
     sell_date,
     COUNT(DISTINCT product) AS sold_count,
-    GROUP_CONCAT(DISTINCT product ORDER BY product ASC SEPARATOR ',') AS products
+    GROUP_CONCAT(DISTINCT product ORDER BY product SEPARATOR ',') AS products
 FROM activities
 GROUP BY sell_date
 ORDER BY sell_date; 
