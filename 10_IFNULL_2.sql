@@ -1,6 +1,6 @@
 /*
 [질문]
-각 사용자(buyer_id)의 가입 날짜(join_date)와 2025년에 구매한 주문 수(orders_in_2025)를 조회하는 SQL 쿼리를 작성합니다.
+각 사용자(buyer_id)의 가입 날짜(join_date)와 함께 2025년에 구매한 주문 수(orders_in_2025)를 조회하는 SQL 쿼리를 작성합니다.
 */
 
 # [SETTING]
