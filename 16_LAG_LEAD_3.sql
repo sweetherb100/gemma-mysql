@@ -27,7 +27,7 @@ FROM seat;
 SELECT
     seat_id,
     MOD(seat_id, 2) AS even_odd_flag,
-    LAG(student) OVER (ORDER BY seat_id) AS pre_student,
+    LAG(student) OVER (ORDER BY seat_id) AS prev_student,
     student,
     LEAD(student) OVER (ORDER BY seat_id) AS post_student
 FROM seat
@@ -36,13 +36,13 @@ ORDER BY seat_id;
 # [코드 16-11] LAG, LEAD 문제 3 최종 코드
 SELECT
     seat_id,
-    IF(even_odd_flag = 0, pre_student, IFNULL(post_student, student)) AS student
+    IF(even_odd_flag = 0, prev_student, IFNULL(post_student, student)) AS student
     /* IF 짝수 row이면 이전 student를 가져오고, ELSE 홀수 row이면 다음 student를 가져온다. (IFNULL: 마지막 홀수 row이면 그대로 유지한다.) */
 FROM (
 	SELECT
 		seat_id,
 		MOD(seat_id, 2) AS even_odd_flag,
-		LAG(student) OVER (ORDER BY seat_id) AS pre_student,
+		LAG(student) OVER (ORDER BY seat_id) AS prev_student,
 		student,
 		LEAD(student) OVER (ORDER BY seat_id) AS post_student
 	FROM seat

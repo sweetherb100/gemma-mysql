@@ -28,8 +28,8 @@ SELECT
     weather_id,
     record_date,
     temperature,
-    LAG(record_date) OVER (ORDER BY record_date) AS pre_rd, /* 각 날짜의 이전 날짜 */
-    LAG(temperature) OVER (ORDER BY record_date) pre_t /* 각 날짜의 이전 기온 */
+    LAG(record_date) OVER (ORDER BY record_date) AS prev_rd, /* 각 날짜의 이전 날짜 */
+    LAG(temperature) OVER (ORDER BY record_date) prev_t /* 각 날짜의 이전 기온 */
 FROM weather
 ORDER BY record_date;
         
@@ -42,12 +42,12 @@ SELECT
 		weather_id,
 		record_date,
 		temperature,
-		LAG(record_date) OVER (ORDER BY record_date) AS pre_rd,  /* 각 날짜의 이전 날짜 */
-		LAG(temperature) OVER (ORDER BY record_date) AS pre_t /* 각 날짜의 이전 기온 */
+		LAG(record_date) OVER (ORDER BY record_date) AS prev_rd,  /* 각 날짜의 이전 날짜 */
+		LAG(temperature) OVER (ORDER BY record_date) AS prev_t /* 각 날짜의 이전 기온 */
 	FROM weather
 ) AS a
-WHERE pre_t < temperature
-AND pre_rd = DATE_SUB(record_date, INTERVAL 1 DAY);
+WHERE prev_t < temperature
+AND prev_rd = DATE_SUB(record_date, INTERVAL 1 DAY);
 
 # [코드 16-7] LAG, LEAD 문제 2 오답 코드
 SELECT
@@ -58,11 +58,11 @@ SELECT
 		weather_id,
 		record_date,
 		temperature,
-		LAG(record_date) OVER (ORDER BY record_date) AS pre_rd,  /* 각 날짜의 이전 날짜 */
-		LAG(temperature) OVER (ORDER BY record_date) AS pre_t /* 각 날짜의 이전 기온 */
+		LAG(record_date) OVER (ORDER BY record_date) AS prev_rd,  /* 각 날짜의 이전 날짜 */
+		LAG(temperature) OVER (ORDER BY record_date) AS prev_t /* 각 날짜의 이전 기온 */
 	FROM weather
 ) AS a
-WHERE pre_t < temperature;
+WHERE prev_t < temperature;
 
 # [코드 16-8] LAG, LEAD 문제 2 중간 코드
 SELECT w1.weather_id,
