@@ -1,6 +1,6 @@
 /*
 [질문]
-각 sale_id에 해당하는 제품 이름(product_name), 판매 연도(year) 및 판매 가격(price)을 조회하는 SQL 쿼리를 작성합니다.
+각 sale_id에 해당하는 제품 이름(product_name), 판매 연도(year), 판매 가격(price)을 조회하는 SQL 쿼리를 작성합니다.
 */
 
 # [SETTING]

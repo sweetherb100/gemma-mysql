@@ -1,7 +1,7 @@
 /*
 [질문]
 각 학생(student_id, student_name)이 각 시험(subject_name)에 응시한 횟수(attended_exams)를 조회하는 SQL 쿼리를 작성합니다.
-student_id와 subject_name를 기준으로 오름차순으로 정렬합니다.
+student_id와 subject_name을 기준으로 오름차순으로 정렬합니다.
 */
 
 # [SETTING]
