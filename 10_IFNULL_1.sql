@@ -77,7 +77,7 @@ SELECT
 FROM users AS u
 LEFT OUTER JOIN rides AS r
 ON u.id = r.user_id
-GROUP BY u.id, u.name /* u.name만 쓰는 것은 비추천. 동명이인이 나올 수 있기 때문에 */
+GROUP BY u.id, u.name /* u.name만 쓰는 것은 비추천. 동명이인이 나올 수 있어서 */
 ORDER BY traveled_distance DESC, name;
 
 # [코드 10-4] IFNULL 문제 1 오답 코드

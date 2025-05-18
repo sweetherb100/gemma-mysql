@@ -1,5 +1,5 @@
 /*
-어제에 비해 기온(temperature)이 더 높은 날의 날짜 ID(weather_id)를 조회하는 SQL 쿼리를 작성합니다.
+어제보다 기온(temperature)이 더 높은 날의 날짜 ID(weather_id)를 조회하는 SQL 쿼리를 작성합니다.
 */
 
 # [SETTING]

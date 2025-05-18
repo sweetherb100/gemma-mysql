@@ -1,6 +1,6 @@
 /*
-각 학생(student_id)이 받은 최고 성적의 과목(course_id)와 그 성적(best_grade)을 조회하는 SQL 쿼리를 작성합니다.
-최고 성적을 받은 과목이 여러 개인 경우 course_id가 가장 작은 과목을 조회합니다.
+각 학생(student_id)이 받은 최고 성적의 과목(course_id)과 그 성적(best_grade)을 조회하는 SQL 쿼리를 작성합니다.
+최고 성적을 받은 과목이 여러 개면 course_id가 가장 작은 과목을 조회합니다.
 student_id 기준으로 오름차순으로 정렬합니다.
 */
 

@@ -3,8 +3,8 @@
 각 사용자(user_id)의 평균 웹사이트 방문 시간(avg_visit_time)을 조회하는 SQL 쿼리를 작성합니다.
 평균 웹사이트 방문 시간은 초 단위로 반환합니다.
 여기서 웹사이트 방문 시간은 page_load와 page_exit 사이의 시간 차이로 정의됩니다.
-같은 날에 여러 page_load 이벤트가 있을 경우 가장 마지막 page_load를 사용합니다.
-또한 같은 날에 여러 page_exit 이벤트가 있을 경우 가장 첫 page_exit를 사용합니다.
+같은 날에 여러 page_load 이벤트가 있으면 가장 마지막 page_load를 사용합니다.
+또한 같은 날에 여러 page_exit 이벤트가 있으면 가장 첫 page_exit를 사용합니다.
 page_load는 page_exit 이전에 발생하도록 합니다.
 */
 

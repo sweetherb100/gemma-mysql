@@ -1,8 +1,8 @@
 /*
 [질문]
-각 직원(emp_id)이 매일(day) 사무실에서 보낸 총 시간(total_time)을 분 단위로 조회하는 SQL 쿼리를 작성합니다.
-직원(emp_id)은 하루 동안 두 번 이상 출입할 수 있습니다.
-각 행의 사무실에서 보낸 시간은 out_time - in_time입니다.
+각 직원(emp_id)이 매일(day) 사무실에서 보낸 총시간(total_time)을 조회하는 SQL 쿼리를 작성합니다.
+직원은 하루 동안 두 번 이상 출입할 수 있습니다.
+각 행의 사무실에서 보낸 시간(분 단위)은 out_time에서 in_time을 뺀 값(out_time - in_time)입니다.
 */
 
 # [SETTING]

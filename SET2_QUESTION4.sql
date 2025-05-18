@@ -1,6 +1,6 @@
 /*
 [질문]
-비디오 승인을 가장 많이 받은 사용자 전체 이름(username)를 조회하는 SQL 쿼리를 작성합니다.
+비디오 승인을 가장 많이 받은 사용자 전체 이름(username)을 조회하는 SQL 쿼리를 작성합니다.
 사용자의 전체 이름은 이름(uploader_firstname)과 성(uploader_lastname) 사이에 공백을 포함합니다.
 */
 
