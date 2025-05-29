@@ -33,10 +33,10 @@ VALUES (1, 'login', '2025-05-01'),
 SELECT *
 FROM traffic;
 
-# [코드 SET 1-8] 중간 코드
+# [코드 세트 1-8] 중간 코드
 SELECT DATE_SUB('2025-06-30', INTERVAL 90 DAY) AS 90_days_before;
 
-# [코드 SET 1-9] 중간 코드
+# [코드 세트 1-9] 중간 코드
 SELECT
   user_id,
   MIN(activity_date)
@@ -45,7 +45,7 @@ WHERE activity = 'login'
 GROUP BY user_id
 HAVING MIN(activity_date) >= DATE_SUB('2025-06-30', INTERVAL 90 DAY);
 
-# [코드 SET 1-10] 최종 코드
+# [코드 세트 1-10] 최종 코드
 SELECT
   login_date,
   COUNT(user_id) AS user_count

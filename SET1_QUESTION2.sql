@@ -24,7 +24,7 @@ VALUES
 SELECT *
 FROM employee;
 
-# [코드 SET 1-3] 중간 코드
+# [코드 세트 1-3] 중간 코드
 SELECT
 	manager_id,
 	COUNT(*),
@@ -32,7 +32,7 @@ SELECT
 FROM employee
 GROUP BY manager_id;
 
-# [코드 SET 1-4] 최종 코드
+# [코드 세트 1-4] 최종 코드
 SELECT name
 FROM employee
 WHERE id IN (

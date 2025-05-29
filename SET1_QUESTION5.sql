@@ -34,7 +34,7 @@ VALUES ('Yuna', NULL),
 SELECT *
 FROM voting_results;
 
-# [코드 SET 1-11] 중간 코드
+# [코드 세트 1-11] 중간 코드
 SELECT
   voter,
   candidate,
@@ -44,7 +44,7 @@ FROM voting_results
 WHERE candidate IS NOT NULL
 ORDER BY voter;
    
-# [코드 SET 1-12] 중간 코드
+# [코드 세트 1-12] 중간 코드
 SELECT
   candidate,
   SUM(point) AS tot_point,
@@ -61,7 +61,7 @@ FROM (
 GROUP BY candidate
 ORDER BY tot_point DESC;
       
-# [코드 SET 1-13] 최종 코드
+# [코드 세트 1-13] 최종 코드
 SELECT
   candidate AS winner
 FROM (

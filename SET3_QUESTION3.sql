@@ -31,7 +31,7 @@ VALUES ('Alex', 'Amber', 'sent', '2025-01-04'),
 SELECT *
 FROM friend_requests;
 
-# [코드 SET 3-4] 중간 코드
+# [코드 세트 3-4] 중간 코드
 SELECT
   sender_user,
   receiver_user,
@@ -41,7 +41,7 @@ FROM friend_requests
 GROUP BY sender_user, receiver_user
 ORDER BY sent_date;
     
-# [코드 SET 3-5] 최종 코드
+# [코드 세트 3-5] 최종 코드
 SELECT
   sent_date,
   SUM(accepted) / COUNT(*) AS accepted_rate

@@ -38,7 +38,7 @@ VALUES (0, '2025-04-25 13:30:15', 'page_load'),
 SELECT *
 FROM web_log;
 
-# [코드 SET 2-11] 중간 코드
+# [코드 세트 2-11] 중간 코드
 SELECT
   user_id,
   DATE_FORMAT(timestamp, '%Y-%m-%d') AS date,
@@ -48,7 +48,7 @@ FROM web_log
 GROUP BY user_id, DATE_FORMAT(timestamp, '%Y-%m-%d')
 ORDER BY user_id, date;
 
-# [코드 SET 2-12] 중간 코드
+# [코드 세트 2-12] 중간 코드
 SELECT
   user_id,
   date,
@@ -65,7 +65,7 @@ FROM (
 WHERE latest_load < earliest_exit
 ORDER BY user_id, date;
 
-# [코드 SET 2-13] 최종 코드
+# [코드 세트 2-13] 최종 코드
 SELECT
   user_id,
   AVG(time_diff) AS avg_visit_time

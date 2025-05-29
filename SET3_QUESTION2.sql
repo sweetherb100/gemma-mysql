@@ -59,7 +59,7 @@ VALUES (108, 'spanish'),
 SELECT *
 FROM purchase_users;
 
-# [코드 SET 3-3] 최종 코드
+# [코드 세트 3-3] 최종 코드
 SELECT
   language,
   COUNT(DISTINCT CASE

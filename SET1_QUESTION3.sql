@@ -22,7 +22,7 @@ VALUES (1, 2, '2025-06-03'),
 SELECT *
 FROM request_accepted; 
 
-# [코드 SET 1-5] 중간 코드
+# [코드 세트 1-5] 중간 코드
 SELECT requester_id AS id
 FROM request_accepted
 
@@ -31,7 +31,7 @@ UNION ALL
 SELECT accepter_id AS id
 FROM request_accepted; 
     
-# [코드 SET 1-6] 중간 코드
+# [코드 세트 1-6] 중간 코드
 SELECT
     id,
     COUNT(id) AS friend_count,
@@ -45,7 +45,7 @@ FROM (
 ) AS a
 GROUP BY id;
 
-# [코드 SET 1-7] 최종 코드
+# [코드 세트 1-7] 최종 코드
 SELECT
     id,
     friend_count

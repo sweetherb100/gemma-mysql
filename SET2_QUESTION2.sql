@@ -27,7 +27,7 @@ VALUES (1, 4, '2025-07-22'),
 SELECT *
 FROM views;
 
-# [코드 SET 2-3] 중간 코드
+# [코드 세트 2-3] 중간 코드
 SELECT
     viewer_id,
     view_date,
@@ -36,7 +36,7 @@ SELECT
 FROM views
 ORDER BY viewer_id, view_date; 
     
-# [코드 SET 2-4] 최종 코드
+# [코드 세트 2-4] 최종 코드
 SELECT DISTINCT viewer_id
 FROM (
 	SELECT

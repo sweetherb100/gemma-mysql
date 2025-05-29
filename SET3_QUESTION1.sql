@@ -58,7 +58,7 @@ VALUES (1, 5000),
 SELECT *
 FROM bonus;
 
-# [코드 SET 3-1] 중간 코드
+# [코드 세트 3-1] 중간 코드
 SELECT *
 FROM employee AS t1
 INNER JOIN (
@@ -70,7 +70,7 @@ INNER JOIN (
 ) AS t2
 ON t1.employee_id = t2.employee_id;
     
-# [코드 SET 3-2] 최종 코드
+# [코드 세트 3-2] 최종 코드
 SELECT
   employee_title,
   gender,

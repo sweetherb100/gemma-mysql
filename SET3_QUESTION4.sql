@@ -28,7 +28,7 @@ VALUES (1, '2024-03-01', 5),
 SELECT *
 FROM activity;
 
-# [코드 SET 3-6] 중간 코드
+# [코드 세트 3-6] 중간 코드
 SELECT
   player_id,
   LAG(player_id) OVER (ORDER BY player_id, event_date) AS prev_id,
@@ -38,7 +38,7 @@ SELECT
 FROM activity
 ORDER BY player_id, event_date;
 
-# [코드 SET 3-7] 중간 코드
+# [코드 세트 3-7] 중간 코드
 SELECT
   *
 FROM (
@@ -54,7 +54,7 @@ WHERE rnk_date = 2
   AND DATE_SUB(event_date, INTERVAL 1 DAY) = prev_date
   AND player_id = prev_id;
 
-# [코드 SET 3-8] 최종 코드
+# [코드 세트 3-8] 최종 코드
 SELECT
   ROUND(
     COUNT(player_id) / (SELECT COUNT(DISTINCT player_id) FROM activity), 2) AS login_again_rate
@@ -71,7 +71,7 @@ WHERE rnk_date = 2
   AND DATE_SUB(event_date, INTERVAL 1 DAY) = prev_date
   AND player_id = prev_id;
   
-# [코드 SET 3-9] 오답 코드
+# [코드 세트 3-9] 오답 코드
 SELECT
   *
 FROM (

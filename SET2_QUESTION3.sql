@@ -62,7 +62,7 @@ VALUES (1, 1, 30, '2025-01-12'),
 SELECT *
 FROM movie_score;
 
-# [코드 SET 2-5] 중간 코드
+# [코드 세트 2-5] 중간 코드
 SELECT
 	name,
 	COUNT(score)
@@ -72,7 +72,7 @@ ON m.user_id = u.user_id
 GROUP BY name
 ORDER BY COUNT(score) DESC, name;
 
-# [코드 SET 2-6] 중간 코드
+# [코드 세트 2-6] 중간 코드
 SELECT
 	title,
     AVG(score)
@@ -83,7 +83,7 @@ WHERE DATE_FORMAT(created_at, '%Y-%m') = '2025-02'
 GROUP BY title
 ORDER BY AVG(score) DESC, title;
 
-# [코드 SET 2-7] 최종 코드
+# [코드 세트 2-7] 최종 코드
 SELECT results
 FROM (
     SELECT name AS results
@@ -109,7 +109,7 @@ FROM (
     LIMIT 1
 ) AS b;
 
-# [코드 SET 2-8] 오답 코드
+# [코드 세트 2-8] 오답 코드
 SELECT name AS results
 FROM movie_score AS m
 INNER JOIN users AS u

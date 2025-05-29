@@ -26,7 +26,7 @@ VALUES
 SELECT *
 FROM employee;
 
-# [코드 SET 1-1] 중간 코드
+# [코드 세트 1-1] 중간 코드
 SELECT
   name,
   department,
@@ -35,7 +35,7 @@ SELECT
 FROM employee
 ORDER BY department, rk;
 
-# [코드 SET 1-2] 최종 코드
+# [코드 세트 1-2] 최종 코드
 SELECT
   name,
   department,

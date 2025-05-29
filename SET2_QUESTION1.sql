@@ -21,13 +21,13 @@ VALUES ('Adam', 'Bob'),
 SELECT *
 FROM sns_follow_log;
 
-# [코드 SET 2-1] 중간 코드
+# [코드 세트 2-1] 중간 코드
 SELECT *
 FROM sns_follow_log AS f1
 LEFT OUTER JOIN sns_follow_log AS f2
 ON f1.follower = f2.followee;
     
-# [코드 SET 2-2] 최종 코드
+# [코드 세트 2-2] 최종 코드
 SELECT
   f1.follower,
   COUNT(f2.follower) AS follower_count

@@ -45,14 +45,14 @@ VALUES (1, 1, 100, '2024-07-26'),
 SELECT *
 FROM orders;
 
-# [코드 SET 3-10] 중간 코드
+# [코드 세트 3-10] 중간 코드
 SELECT book_id
 FROM orders
 WHERE delivery_date BETWEEN DATE_SUB('2025-06-23', INTERVAL 1 YEAR) AND '2025-06-23'
 GROUP BY book_id
 HAVING SUM(quantity) < 10;
 
-# [코드 SET 3-11] 중간 코드
+# [코드 세트 3-11] 중간 코드
 SELECT book_id
 FROM orders
 WHERE delivery_date BETWEEN DATE_SUB('2025-06-23', INTERVAL 1 YEAR) AND '2025-06-23'
@@ -67,7 +67,7 @@ WHERE DATE_SUB('2025-06-23', INTERVAL 1 MONTH) < published_date
   AND published_date <= '2025-06-23'
 ORDER BY book_id;
     
-# [코드 SET 3-12] 최종 코드
+# [코드 세트 3-12] 최종 코드
 SELECT
   book_id,
   name

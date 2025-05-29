@@ -54,7 +54,7 @@ VALUES ('r001', 'declined'),
 SELECT *
 FROM reviews; 
 
-# [코드 SET 2-9] 중간 코드
+# [코드 세트 2-9] 중간 코드
 SELECT
   CONCAT(uploader_firstname, ' ', uploader_lastname) AS username,
   COUNT(video_id) AS video_count,
@@ -65,7 +65,7 @@ ON t1.review_id = t2.review_id
 WHERE reviewed_outcome = 'approved'
 GROUP BY CONCAT(uploader_firstname, ' ', uploader_lastname);
 
-# [코드 SET 2-10] 최종 코드
+# [코드 세트 2-10] 최종 코드
 SELECT
   username
 FROM (
