@@ -65,8 +65,8 @@ ORDER BY student_id, subject_name;
 
 # [코드 3-5] CROSS JOIN 문제 2 중간 코드
 SELECT *
-FROM students,
-subjects /* CROSS JOIN */
+FROM students, /* CROSS JOIN */
+subjects 
 ORDER BY student_id, subject_name;
 
 # [코드 3-6] CROSS JOIN 문제 2 최종 코드
