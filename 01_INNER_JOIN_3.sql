@@ -61,7 +61,8 @@ INNER JOIN (
 	SELECT
 		emp_id,
 		name,
-		salary
+		salary,
+		manager_id
 	FROM employee
 	WHERE manager_id IS NULL /* 모든 관리자를 포함하지 않는다. */
 ) AS m
@@ -76,7 +77,7 @@ FROM (
 	WHERE salary > 30000
 ) AS e;
 
-# [코드 1-11] for loop 코드
+# [코드 1-11] C++ for loop 코드
 for (num2 = 0; num2 <= 3; num2++) {
    for (num1 = 0; num1 <= 2; num1++) {
       cout << num2 << " " << num1 << endl;
@@ -93,10 +94,10 @@ CREATE TABLE employee_department
     department   VARCHAR(255)
 );
 INSERT INTO employee_department (employee, salary, department)
-VALUES ('JOE', 70000, 'HR'),
-    ('HENRY', 80000, 'HR'),
-    ('SAM', 60000, 'IT'),
-    ('MAX', 90000, 'IT');
+VALUES ('Henry', 80000, 'HR'),
+	('Sam', 60000, 'IT'),
+    ('Joe', 70000, 'HR'),
+    ('Max', 90000, 'IT');
 SELECT *
 FROM employee_department;
 

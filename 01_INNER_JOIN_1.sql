@@ -32,9 +32,9 @@ CREATE TABLE product
     PRIMARY KEY (product_id)
 );
 INSERT INTO product (product_id, product_name)
-VALUES (100, 'NOKIA'),
-    (200, 'APPLE'),
-    (300, 'SAMSUNG');
+VALUES (100, 'Nokia'),
+    (200, 'Apple'),
+    (300, 'Samsung');
 SELECT *
 FROM product;
 
