@@ -32,7 +32,8 @@ CREATE TABLE units_sold
 (
     product_id    INT,
     purchase_date DATE,
-    units         INT
+    units         INT,
+    PRIMARY KEY(product_id, purchase_date)
 );
 INSERT INTO units_sold
     (product_id, purchase_date, units)
