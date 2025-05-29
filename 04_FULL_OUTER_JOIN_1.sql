@@ -78,6 +78,7 @@ WHERE e.employee_id IS NULL
 ORDER BY employee_id; 
 
 # [코드 4-4] FULL OUTER JOIN 문제 1 중간 코드
+/* MySQL에서 FULL OUTER JOIN 문법 지원 X */
 SELECT
 	e.name,
 	e.employee_id,
@@ -88,6 +89,7 @@ FULL OUTER JOIN salaries AS s
 ON e.employee_id = s.employee_id;
 
 # [코드 4-5] FULL OUTER JOIN 문제 1 중간 코드
+/* MySQL에서 FULL OUTER JOIN 문법 지원 X */
 SELECT
 	e.name,
 	e.employee_id,
@@ -100,6 +102,7 @@ WHERE e.employee_id IS NULL
 	OR s.employee_id IS NULL;
 
 # [코드 4-6] FULL OUTER JOIN 문제 1 최종 코드
+/* MySQL에서 FULL OUTER JOIN 문법 지원 X */
 SELECT
 	CASE
 		WHEN e.employee_id IS NULL THEN s.employee_id
@@ -152,6 +155,7 @@ LEFT OUTER JOIN salaries AS s
 ON e.employee_id = s.employee_id;
 
 # [코드 4-10] FULL OUTER JOIN 코드
+/* MySQL에서 FULL OUTER JOIN 문법 지원 X */
 SELECT
 	e.name,
 	e.employee_id,
