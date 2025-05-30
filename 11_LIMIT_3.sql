@@ -112,7 +112,8 @@ INNER JOIN
 ON c.candidate_id = v.candidate_id; 
 
 # [코드 11-13] LIMIT 문제 3 오답 코드
-#Error Code: 1140. In aggregated query without GROUP BY, expression
+# Error Code: 1140. In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'practice.vote.candidate_id';
+# this is incompatible with sql_mode=only_full_group_by
 # -> GROUP BY 필요
 SELECT
     candidate_id,
