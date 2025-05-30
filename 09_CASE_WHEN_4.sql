@@ -20,8 +20,8 @@ INSERT INTO accounts
     (account_id, income)
 VALUES (2, 12747),
 	(3, 108939),
-    (8, 87709),
-    (6, 91796);
+    (6, 91796),
+    (8, 87709);
 SELECT *
 FROM accounts; 
 
