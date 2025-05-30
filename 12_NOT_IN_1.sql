@@ -52,7 +52,8 @@ WHERE referee_id != 2;
 SELECT
     name
 FROM customer
-WHERE referee_id != 2 OR referee_id IS NULL; 
+WHERE referee_id != 2
+	OR referee_id IS NULL; 
 
 # [코드 12-5] NOT IN의 옳은 사용법 코드
 SELECT

@@ -51,8 +51,7 @@ FROM transactions;
 # [코드 12-12] NOT IN 문제 3 중간 코드
 SELECT *
 FROM visits
-WHERE visit_id NOT IN
-(
+WHERE visit_id NOT IN (
 	SELECT
 		visit_id
 	FROM transactions
@@ -63,8 +62,7 @@ SELECT
     customer_id,
     COUNT(*) AS no_trans_count
 FROM visits
-WHERE visit_id NOT IN
-(
+WHERE visit_id NOT IN (
 	SELECT
 		visit_id
 	FROM transactions
