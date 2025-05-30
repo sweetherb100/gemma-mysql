@@ -54,7 +54,7 @@ SELECT
     person_name,
     weight,
     SUM(weight) OVER () AS total_weight,
-    ROUND(weight/SUM(weight) OVER ()*100, 2) AS weight_percent
+    ROUND(weight/SUM(weight) OVER () * 100, 2) AS weight_percent
 FROM queue
 ORDER BY turn; 
 
@@ -63,6 +63,6 @@ SELECT
     MOD(turn, 2) AS even_odd_index,
     SUM(weight) AS grouped_weight,
     SUM(SUM(weight)) OVER () AS total_weight,
-    ROUND(SUM(weight)/SUM(SUM(weight)) OVER ()*100, 2) AS weight_percent
+    ROUND(SUM(weight)/SUM(SUM(weight)) OVER () * 100, 2) AS weight_percent
 FROM queue
 GROUP BY MOD(turn, 2);
