@@ -5,7 +5,7 @@
 단일 숫자가 없으면 NULL을 반환합니다.
 */
 
-# [SETTING]
+# [SETTING1]
 USE practice;
 DROP TABLE my_numbers;
 CREATE TABLE my_numbers
@@ -22,6 +22,25 @@ VALUES (8),
     (4),
     (5),
     (6);
+SELECT *
+FROM my_numbers; 
+
+# [SETTING2]
+USE practice;
+DROP TABLE my_numbers;
+CREATE TABLE my_numbers
+(
+    num INT
+);
+INSERT INTO my_numbers
+    (num)
+VALUES (8),
+    (8),
+    (7),
+    (7),
+    (3),
+    (3),
+    (3);
 SELECT *
 FROM my_numbers; 
 
