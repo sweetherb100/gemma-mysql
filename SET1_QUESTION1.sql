@@ -15,8 +15,7 @@ CREATE TABLE employee (
 );
 INSERT INTO
   employee (id, name, department, salary)
-VALUES
-	(101, 'Max', 'Sales', 1300),
+VALUES (101, 'Max', 'Sales', 1300),
 	(102, 'Katty', 'Management', 150000),
 	(103, 'Richard', 'Management', 250000),
 	(104, 'Jennifer', 'Sales', 1000),

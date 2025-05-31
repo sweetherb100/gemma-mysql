@@ -14,8 +14,7 @@ CREATE TABLE employee (
 );
 INSERT INTO
   employee (id, name, manager_id)
-VALUES
-  (101, 'John', NULL),
+VALUES (101, 'John', NULL),
   (102, 'Dan', 101),
   (103, 'James', 101),
   (104, 'Amy', 101),
