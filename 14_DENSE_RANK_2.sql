@@ -49,7 +49,7 @@ FROM employee;
 
 # [코드 14-5] DENSE_RANK 문제 2 최종 코드
 SELECT
-    MAX(salary) AS second_highest_salary /* [결과 예시 2] 해결 (max, min, avg 등 어떠한 집계함수든 상관 없음) */
+    MAX(salary) AS second_highest_salary /* [테이블 예시 2] 해결 */
 FROM (
 	SELECT
 		employee_id,
@@ -61,7 +61,7 @@ WHERE drk = 2;
 
 # [코드 14-6] DENSE_RANK 문제 2 오답 코드
 SELECT
-    salary AS second_highest_salary  /* [결과 예시 2]에서 오답 */
+    salary AS second_highest_salary  /* [테이블 예시 2] 오답 */
 FROM (
 	SELECT
 		employee_id,
@@ -73,7 +73,7 @@ WHERE drk = 2;
 
 # [코드 14-7] DENSE_RANK 문제 2 최종 코드
 SELECT
-    MAX(salary) AS second_highest_salary /* [결과 예시 2] 해결 */
+    MAX(salary) AS second_highest_salary /* [테이블 예시 2] 해결 */
 FROM employee
 WHERE salary NOT IN (
 	SELECT
