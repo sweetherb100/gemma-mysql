@@ -10,7 +10,8 @@ CREATE TABLE sales
 (
     seller_id  INT,
     sale_date  DATE,
-    price	   INT
+    price	   INT,
+    PRIMARY KEY(seller_id, sale_date)
 );
 INSERT INTO sales
     (seller_id, sale_date, price)
