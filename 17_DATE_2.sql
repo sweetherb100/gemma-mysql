@@ -38,7 +38,7 @@ SELECT
 SELECT activity_date
 FROM activity
 WHERE DATE_SUB('2024-07-27', INTERVAL 30 DAY) < activity_date
-AND activity_date <= '2024-07-27'
+	AND activity_date <= '2024-07-27'
 ORDER BY activity_date;
 
 # [코드 17-7] DATE 문제 2 최종 코드
@@ -47,7 +47,7 @@ SELECT
     COUNT(DISTINCT user_id) AS active_user_count
 FROM activity
 WHERE DATE_SUB('2024-07-27', INTERVAL 30 DAY) < activity_date
-AND activity_date <= '2024-07-27'
+	AND activity_date <= '2024-07-27'
 GROUP BY activity_date;
 
 # [코드 17-8] DATE 문제 2 오답 코드
