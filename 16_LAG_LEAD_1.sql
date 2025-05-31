@@ -35,8 +35,7 @@ ORDER BY seat_id;
 # [코드 16-2] LAG, LEAD 문제 1 최종 코드
 SELECT
     seat_id
-FROM
-(
+FROM (
 	SELECT
 		seat_id,
 		LAG(free) OVER (ORDER BY seat_id) AS prev_free,
@@ -44,7 +43,8 @@ FROM
 		LEAD(free) OVER (ORDER BY seat_id) AS post_free
 	FROM seats
 ) AS s
-WHERE (free = 1 AND post_free = 1) OR (prev_free = 1 AND free = 1)
+WHERE (free = 1 AND post_free = 1)
+	OR (prev_free = 1 AND free = 1)
 ORDER BY seat_id; 
 
 # [코드 16-3] LAG, LEAD 기본값 코드

@@ -36,8 +36,7 @@ ORDER BY record_date;
 # [코드 16-6] LAG, LEAD 문제 2 최종 코드
 SELECT
     weather_id
-FROM
-(
+FROM (
 SELECT
 		weather_id,
 		record_date,
@@ -47,13 +46,12 @@ SELECT
 	FROM weather
 ) AS a
 WHERE prev_t < temperature
-AND prev_rd = DATE_SUB(record_date, INTERVAL 1 DAY);
+	AND prev_rd = DATE_SUB(record_date, INTERVAL 1 DAY);
 
 # [코드 16-7] LAG, LEAD 문제 2 오답 코드
 SELECT
     *
-FROM
-(
+FROM (
 SELECT
 		weather_id,
 		record_date,
