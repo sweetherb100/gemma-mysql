@@ -10,8 +10,7 @@ DROP TABLE traffic;
 CREATE TABLE traffic (
   user_id INT,
   activity ENUM ('login', 'homepage', 'jobs', 'groups', 'logout'),
-  activity_date DATE,
-  PRIMARY KEY (user_id, activity, activity_date)
+  activity_date DATE
 );
 INSERT INTO
   traffic (user_id, activity, activity_date)
