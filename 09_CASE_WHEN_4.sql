@@ -37,14 +37,14 @@ SELECT
     COUNT(CASE WHEN income < 20000 THEN 1 END) AS accounts_count
 FROM accounts
 
-UNION
+UNION ALL /* categories dont overlap, so UNION ALL is sufficient */
 
 SELECT
     'Average Salary' AS category,
     COUNT(CASE WHEN 20000 <= income AND income <= 50000 THEN 1 END) AS accounts_count
 FROM accounts
 
-UNION
+UNION ALL /* categories dont overlap, so UNION ALL is sufficient */
 
 SELECT
     'High Salary' AS category,
